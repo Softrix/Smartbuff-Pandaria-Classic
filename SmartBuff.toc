@@ -1,0 +1,20 @@
+## Interface: 50500
+## Title: |TInterface\Addons\Smartbuff\Icons\IconEnabled:0|t SmartBuff |cff0099ffMOP Classic|r
+## Version: 65.50500
+## Author: |cff20d2ffCodermik & Aeldra|r (EU-Proudmoore)
+## Contributing Author: |cff20d2ffSpeedwaystar, MrWizard
+## Notes: Cast the most important buffs on you, your party or raid members. Use /sbm for options menu.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## LoadSavedVariablesFirst: true
+## SavedVariables: SMARTBUFF_OptionsGlobal
+## SavedVariablesPerCharacter: SMARTBUFF_Options, SMARTBUFF_Buffs
+## IconTexture: Interface\Addons\Smartbuff\Icons\IconEnabled.tga
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+SmartBuff.globals.lua
+SmartBuff.xml
+
+Libs\Broker_SmartBuff\LibDataBroker-1.1.lua
+Libs\Broker_SmartBuff\Broker_SmartBuff.lua
