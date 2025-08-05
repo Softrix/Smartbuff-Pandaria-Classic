@@ -6,15 +6,15 @@
 -- Cast the most important buffs on you, tanks or party/raid members/pets.
 -------------------------------------------------------------------------------
 
-SMARTBUFF_DATE               = "300525";
-SMARTBUFF_VERSION            = "r65." .. SMARTBUFF_DATE;
+SMARTBUFF_DATE               = "050825";
+SMARTBUFF_VERSION            = "r67." .. SMARTBUFF_DATE;
 SMARTBUFF_VERSIONNR          = 50500;
 
 SMARTBUFF_TITLE              = "SmartBuff";
 SMARTBUFF_SUBTITLE           = "Supports you in casting buffs";
 SMARTBUFF_DESC               = "Cast the most important buffs on you, your tanks, party/raid members/pets";
 SMARTBUFF_VERS_TITLE         = SMARTBUFF_TITLE .. " " .. SMARTBUFF_VERSION;
-SMARTBUFF_OPTIONS_TITLE      = SMARTBUFF_VERS_TITLE .. " Beta ";
+SMARTBUFF_OPTIONS_TITLE      = SMARTBUFF_VERS_TITLE .. " MOP ";
 
 -- addon name
 local addonName              = ...

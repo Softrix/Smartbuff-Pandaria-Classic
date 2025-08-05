@@ -1,6 +1,6 @@
 ## Interface: 50500
 ## Title: |TInterface\Addons\Smartbuff\Icons\IconEnabled:0|t SmartBuff |cff0099ffMOP Classic|r
-## Version: 65.50500
+## Version: 67.50500
 ## Author: |cff20d2ffCodermik & Aeldra|r (EU-Proudmoore)
 ## Contributing Author: |cff20d2ffSpeedwaystar, MrWizard
 ## Notes: Cast the most important buffs on you, your party or raid members. Use /sbm for options menu.

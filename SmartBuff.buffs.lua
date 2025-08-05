@@ -350,10 +350,8 @@ function SMARTBUFF_InitSpellIDs()
 
   -- Warlock
   SMARTBUFF_AMPLIFYCURSE    = getSpellBookItemByName(328774);--"Amplify Curse"
-  SMARTBUFF_DEMONARMOR      = getSpellBookItemByName(285933);--"Demon ARmor"
-  SMARTBUFF_DARKINTENT      = getSpellBookItemByName(183582);--"Dark Intent"
   SMARTBUFF_UNENDINGBREATH  = getSpellBookItemByName(5697);  --"Unending Breath"
-  SMARTBUFF_SOULLINK        = getSpellBookItemByName(108447);--"Soul Link"
+  SMARTBUFF_SOULLINK        = getSpellBookItemByName(108415);--"Soul Link"
   SMARTBUFF_LIFETAP         = getSpellBookItemByName(1454);  --"Life Tap"
   SMARTBUFF_CREATEHS        = getSpellBookItemByName(6201);  --"Create Healthstone"
   SMARTBUFF_CREATEHSWELL    = getSpellBookItemByName(29893); --"Create Soulwell"
@@ -402,20 +400,18 @@ function SMARTBUFF_InitSpellIDs()
   S.LinkLoneWolf = { SMARTBUFF_LW1, SMARTBUFF_LW2, SMARTBUFF_LW3, SMARTBUFF_LW4, SMARTBUFF_LW5, SMARTBUFF_LW6, SMARTBUFF_LW7, SMARTBUFF_LW8 };
 
   -- Shaman
-  SMARTBUFF_LIGHTNINGSHIELD = getSpellBookItemByName(192106); --"Lightning Shield"
+  SMARTBUFF_LIGHTNINGSHIELD = getSpellBookItemByName(324); --"Lightning Shield"
   SMARTBUFF_WATERSHIELD     = getSpellBookItemByName(52127);  --"Water Shield"
   SMARTBUFF_EARTHSHIELD     = getSpellBookItemByName(974);    --"Earth Shield"
   SMARTBUFF_WATERWALKING    = getSpellBookItemByName(546);    --"Water Walking"
   SMARTBUFF_EMASTERY        = getSpellBookItemByName(16166);  --"Elemental Mastery"
+  SMARTBUFF_WINDFURYW       = getSpellBookItemByName(8232);   --"Windfury Weapon"
+  SMARTBUFF_ROCKBITERW      = getSpellBookItemByName(8017);   --"Rockbiter Weapon"
+  SMARTBUFF_FROSTBRANDW     = getSpellBookItemByName(8033);   --"Frostbrand Weapon"
+  SMARTBUFF_FLAMETONGUEW    = getSpellBookItemByName(8024);   --"Flametongue Weapon"
   SMARTBUFF_ASCENDANCE_ELE  = getSpellBookItemByName(114050); --"Ascendance (Elemental)"
   SMARTBUFF_ASCENDANCE_ENH  = getSpellBookItemByName(114051); --"Ascendance (Enhancement)"
   SMARTBUFF_ASCENDANCE_RES  = getSpellBookItemByName(114052); --"Ascendance (Restoration)"
-  SMARTBUFF_WINDFURYW       = getSpellBookItemByName(33757);  --"Windfury Weapon"
-  SMARTBUFF_FLAMETONGUEW    = getSpellBookItemByName(318038); --"Flametongue Weapon"
-  SMARTBUFF_EVERLIVINGW     = getSpellBookItemByName(382021); --"Everliving Weapon"
-  SMARTBUFF_SKYFURY         = getSpellBookItemByName(462854); --"Skyfury"
-  SMARTBUFF_TSWARD          = getSpellBookItemByName(462742); --"Thunderstrike Ward" -- Shield
-  SMARTBUFF_TIDEGUARD       = getSpellBookItemByName(457481); --"Tidecaller's Guard" -- Shield. Replaces Flametongue Weapon
 
   -- Shaman buff links
   S.ChainShamanShield = { SMARTBUFF_LIGHTNINGSHIELD, SMARTBUFF_WATERSHIELD, SMARTBUFF_EARTHSHIELD };
@@ -458,7 +454,7 @@ function SMARTBUFF_InitSpellIDs()
   -- Paladin
   SMARTBUFF_RIGHTEOUSFURY         = getSpellBookItemByName(25780);  --"Righteous Fury"
 --  SMARTBUFF_HOLYSHIELD            = getSpellBookItemByName(20925);  --"Sacred Shield"
-  SMARTBUFF_BOK                   = getSpellBookItemByName(203538); --"Greater Blessing of Kings"
+  SMARTBUFF_BOK                   = getSpellBookItemByName(20217); --"Blessing of Kings"
 --  SMARTBUFF_BOM                   = getSpellBookItemByName(203528); --"Greater Blessing of Might"
   SMARTBUFF_BOW                   = getSpellBookItemByName(203539); --"Greater Blessing of Wisdom"
   SMARTBUFF_HOF                   = getSpellBookItemByName(1044);   --"Blessing of Freedom"
@@ -497,8 +493,8 @@ function SMARTBUFF_InitSpellIDs()
   S.ChainDKPresence = { SMARTBUFF_BLOODPRESENCE, SMARTBUFF_FROSTPRESENCE, SMARTBUFF_UNHOLYPRESENCE };
 
   -- Monk
---  SMARTBUFF_LOTWT           = getSpellBookItemByName(116781); --"Legacy of the White Tiger"
---  SMARTBUFF_LOTE            = getSpellBookItemByName(115921); --"Legacy of the Emperor"
+  SMARTBUFF_LOTWT           = getSpellBookItemByName(116781); --"Legacy of the White Tiger"
+  SMARTBUFF_LOTE            = getSpellBookItemByName(115921); --"Legacy of the Emperor"
   SMARTBUFF_BLACKOX         = getSpellBookItemByName(115315); --"Summon Black Ox Statue"
   SMARTBUFF_JADESERPENT     = getSpellBookItemByName(115313); --"Summon Jade Serpent Statue"
   SMARTBUFF_SOTFIERCETIGER  = getSpellBookItemByName(103985); --"Stance of the Fierce Tiger"
@@ -553,6 +549,7 @@ function SMARTBUFF_InitSpellIDs()
   -- Misc
   SMARTBUFF_KIRUSSOV        = C_Spell.GetSpellInfo(46302); --"K'iru's Song of Victory"
   SMARTBUFF_FISHING         = C_Spell.GetSpellInfo(450647) or C_Spell.GetSpellInfo(131476); --"Fishing"
+  SMARTBUFF_CRYSTAL_INS     = C_Spell.GetSpellInfo(86569);
 
   -- Scroll
   SMARTBUFF_SBAGILITY       = C_Spell.GetSpellInfo(8115);   --"Scroll buff: Agility"
@@ -609,10 +606,10 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_BFLASKCT61      = C_Spell.GetSpellInfo(79640);  --"Enhanced Intellect"
   SMARTBUFF_BFLASKCT62      = C_Spell.GetSpellInfo(79639);  --"Enhanced Agility"
   SMARTBUFF_BFLASKCT63      = C_Spell.GetSpellInfo(79638);  --"Enhanced Strength"
-  SMARTBUFF_BFLASKWOD1      = C_Spell.GetSpellInfo(156077); --"Draenic Stamina Flask"
-  SMARTBUFF_BFLASKWOD2      = C_Spell.GetSpellInfo(156071); --"Draenic Strength Flask"
-  SMARTBUFF_BFLASKWOD3      = C_Spell.GetSpellInfo(156070); --"Draenic Intellect Flask"
-  SMARTBUFF_BFLASKWOD4      = C_Spell.GetSpellInfo(156073); --"Draenic Agility Flask"
+--  SMARTBUFF_BFLASKWOD1      = C_Spell.GetSpellInfo(156077); --"Draenic Stamina Flask"
+--  SMARTBUFF_BFLASKWOD2      = C_Spell.GetSpellInfo(156071); --"Draenic Strength Flask"
+--  SMARTBUFF_BFLASKWOD3      = C_Spell.GetSpellInfo(156070); --"Draenic Intellect Flask"
+--  SMARTBUFF_BFLASKWOD4      = C_Spell.GetSpellInfo(156073); --"Draenic Agility Flask"
 --  SMARTBUFF_BGRFLASKWOD1    = C_Spell.GetSpellInfo(156084); --"Greater Draenic Stamina Flask"
 --  SMARTBUFF_BGRFLASKWOD2    = C_Spell.GetSpellInfo(156080); --"Greater Draenic Strength Flask"
 --  SMARTBUFF_BGRFLASKWOD3    = C_Spell.GetSpellInfo(156079); --"Greater Draenic Intellect Flask"
@@ -779,10 +776,8 @@ function SMARTBUFF_InitSpellList()
   -- Warlock
   if (SMARTBUFF_PLAYERCLASS == "WARLOCK") then
     SMARTBUFF_BUFFLIST = {
-      {SMARTBUFF_DEMONARMOR, -1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_AMPLIFYCURSE, 1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_INQUISITORGAZE, 60, SMARTBUFF_CONST_SELF},
-      {SMARTBUFF_DARKINTENT, 60, SMARTBUFF_CONST_GROUP, nil, "WARRIOR;HUNTER;ROGUE"},
       {SMARTBUFF_SOULLINK, -1, SMARTBUFF_CONST_SELF, nil, S.CheckPetNeeded},
       {SMARTBUFF_UNENDINGBREATH, 10, SMARTBUFF_CONST_GROUP, {16}, "HPET;WPET;DKPET"},
       {SMARTBUFF_LIFETAP, 0.025, SMARTBUFF_CONST_SELF},
@@ -844,16 +839,14 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_WATERSHIELD, 60, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainShamanShield},
       {SMARTBUFF_WINDFURYW, 60, SMARTBUFF_CONST_WEAPON},
       {SMARTBUFF_FLAMETONGUEW, 60, SMARTBUFF_CONST_WEAPON},
-      {SMARTBUFF_TSWARD, 60, SMARTBUFF_CONST_WEAPON},
-      {SMARTBUFF_TIDEGUARD, 60, SMARTBUFF_CONST_WEAPON},
-      {SMARTBUFF_EVERLIVINGW, 60, SMARTBUFF_CONST_WEAPON},
+      {SMARTBUFF_ROCKBITERW, 60, SMARTBUFF_CONST_WEAPON},
+      {SMARTBUFF_FROSTBRANDW, 60, SMARTBUFF_CONST_WEAPON}, 
       {SMARTBUFF_EARTHSHIELD, 10, SMARTBUFF_CONST_GROUP, {50,60,70,75,80}, "WARRIOR;DEATHKNIGHT;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
       {SMARTBUFF_UNLEASHFLAME, 0.333, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_ASCENDANCE_ELE, 0.25, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_ASCENDANCE_ENH, 0.25, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_ASCENDANCE_RES, 0.25, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_EMASTERY, 0.5, SMARTBUFF_CONST_SELF},
-      {SMARTBUFF_SKYFURY, 10, SMARTBUFF_CONST_GROUP, {16}},
       {SMARTBUFF_WATERWALKING, 10, SMARTBUFF_CONST_GROUP, {28}}
     };
   end
