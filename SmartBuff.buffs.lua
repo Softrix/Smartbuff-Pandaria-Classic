@@ -360,6 +360,7 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_SOULSTONE       = getSpellBookItemByName(20707); --"Soulstone"
   SMARTBUFF_GOSACRIFICE     = getSpellBookItemByName(108503);--"Grimoire of Sacrifice"
   SMARTBUFF_INQUISITORGAZE  = getSpellBookItemByName(386344);--"Inquisitor's Gaze"
+  SMARTBUFF_DARKINTENT      = getSpellBookItemByName(109773);--"Dark Intent"
 
   -- Warlock pets
   SMARTBUFF_SUMMONIMP       = getSpellBookItemByName(688);    --"Summon Imp"
@@ -402,7 +403,7 @@ function SMARTBUFF_InitSpellIDs()
   S.LinkLoneWolf = { SMARTBUFF_LW1, SMARTBUFF_LW2, SMARTBUFF_LW3, SMARTBUFF_LW4, SMARTBUFF_LW5, SMARTBUFF_LW6, SMARTBUFF_LW7, SMARTBUFF_LW8 };
 
   -- Shaman
-  SMARTBUFF_LIGHTNINGSHIELD = getSpellBookItemByName(324); --"Lightning Shield"
+  SMARTBUFF_LIGHTNINGSHIELD = getSpellBookItemByName(324);    --"Lightning Shield"
   SMARTBUFF_WATERSHIELD     = getSpellBookItemByName(52127);  --"Water Shield"
   SMARTBUFF_EARTHSHIELD     = getSpellBookItemByName(974);    --"Earth Shield"
   SMARTBUFF_WATERWALKING    = getSpellBookItemByName(546);    --"Water Walking"
@@ -422,13 +423,13 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_BATTLESHOUT     = getSpellBookItemByName(6673);   --"Battle Shout"
   --SMARTBUFF_COMMANDINGSHOUT = getSpellBookItemByName(97462);    --"Reallying Cry"
   SMARTBUFF_BERSERKERRAGE   = getSpellBookItemByName(18499);  --"Berserker Rage"
-  SMARTBUFF_BATSTANCE       = getSpellBookItemByName(386164); --"Battle Stance"
-  SMARTBUFF_DEFSTANCE       = getSpellBookItemByName(197690); --"Defensive Stance"
-  SMARTBUFF_GLADSTANCE      = getSpellBookItemByName(156291); --"Gladiator Stance"
+  SMARTBUFF_BATSTANCE       = getSpellBookItemByName(2457);   --"Battle Stance"
+  SMARTBUFF_DEFSTANCE       = getSpellBookItemByName(71);     --"Defensive Stance"
+  SMARTBUFF_BESSTANCE       = getSpellBookItemByName(2458);   --"Beserker Stance"
   SMARTBUFF_SHIELDBLOCK     = getSpellBookItemByName(2565);   --"Shield Block"
 
   -- Warrior buff links
-  S.ChainWarriorStance = { SMARTBUFF_BATSTANCE, SMARTBUFF_DEFSTANCE, SMARTBUFF_GLADSTANCE };
+  S.ChainWarriorStance = { SMARTBUFF_BATSTANCE, SMARTBUFF_DEFSTANCE, SMARTBUFF_BESSTANCE };
   S.ChainWarriorShout  = { SMARTBUFF_BATTLESHOUT, SMARTBUFF_COMMANDINGSHOUT };
 
   -- Rogue
@@ -455,23 +456,23 @@ function SMARTBUFF_InitSpellIDs()
 
   -- Paladin
   SMARTBUFF_RIGHTEOUSFURY         = getSpellBookItemByName(25780);  --"Righteous Fury"
---  SMARTBUFF_HOLYSHIELD            = getSpellBookItemByName(20925);  --"Sacred Shield"
-  SMARTBUFF_BOK                   = getSpellBookItemByName(20217); --"Blessing of Kings"
---  SMARTBUFF_BOM                   = getSpellBookItemByName(203528); --"Greater Blessing of Might"
-  SMARTBUFF_BOW                   = getSpellBookItemByName(203539); --"Greater Blessing of Wisdom"
+  SMARTBUFF_SACREDSHIELD            = getSpellBookItemByName(20925);  --"Sacred Shield"
+  SMARTBUFF_BOK                   = getSpellBookItemByName(20217);  --"Blessing of Kings"
+  SMARTBUFF_BOM                   = getSpellBookItemByName(19740);  --"Blessing of Might"
+--  SMARTBUFF_BOW                   = getSpellBookItemByName(203539); --"Greater Blessing of Wisdom"
   SMARTBUFF_HOF                   = getSpellBookItemByName(1044);   --"Blessing of Freedom"
-  SMARTBUFF_HOP                   = getSpellBookItemByName(1022);   --"Blessing of Protection"
-  SMARTBUFF_HOSAL                 = getSpellBookItemByName(204013); --"Blessing of Salvation"
+--  SMARTBUFF_HOP                   = getSpellBookItemByName(1022);   --"Blessing of Protection"
+--  SMARTBUFF_HOSAL                 = getSpellBookItemByName(204013); --"Blessing of Salvation"
 --  SMARTBUFF_SOJUSTICE             = getSpellBookItemByName(20164);  --"Seal of Justice"
---  SMARTBUFF_SOINSIGHT             = getSpellBookItemByName(20165);  --"Seal of Insight"
---  SMARTBUFF_SORIGHTEOUSNESS       = getSpellBookItemByName(20154);  --"Seal of Righteousness"
---  SMARTBUFF_SOTRUTH               = getSpellBookItemByName(31801);  --"Seal of Truth"
+  SMARTBUFF_SOINSIGHT             = getSpellBookItemByName(20165);  --"Seal of Insight"
+  SMARTBUFF_SORIGHTEOUSNESS       = getSpellBookItemByName(20154);  --"Seal of Righteousness"
+  SMARTBUFF_SOTRUTH               = getSpellBookItemByName(31801);  --"Seal of Truth"
 --  SMARTBUFF_SOCOMMAND             = getSpellBookItemByName(105361); --"Seal of Command"
   SMARTBUFF_AVENGINGWARTH         = getSpellBookItemByName(31884);  --"Avenging Wrath"
   SMARTBUFF_BEACONOFLIGHT         = getSpellBookItemByName(53563);  --"Beacon of Light"
   SMARTBUFF_BEACONOFAITH          = getSpellBookItemByName(156910); --"Beacon of Faith"
-  SMARTBUFF_CRUSADERAURA          = getSpellBookItemByName(32223); --"Crusader Aura"
-  SMARTBUFF_DEVOTIONAURA          = getSpellBookItemByName(465); --"Devotion Aura"
+  SMARTBUFF_CRUSADERAURA          = getSpellBookItemByName(32223);  --"Crusader Aura"
+  SMARTBUFF_DEVOTIONAURA          = getSpellBookItemByName(465);    --"Devotion Aura"
   SMARTBUFF_RETRIBUTIONAURA       = getSpellBookItemByName(183435); --"Retribution Aura"
   SMARTBUFF_CONCENTRATIONAURA     = getSpellBookItemByName(317920); --"Concentration Aura"
   SMARTBUFF_RITEOFSANTIFICATION   = getSpellBookItemByName(433568); --"Right of Sanctification, Hero"
@@ -483,9 +484,9 @@ function SMARTBUFF_InitSpellIDs()
 
   -- Death Knight
   SMARTBUFF_DANCINGRW         = getSpellBookItemByName(49028); --"Dancing Rune Weapon"
---  SMARTBUFF_BLOODPRESENCE     = getSpellBookItemByName(48263); --"Blood Presence"
---  SMARTBUFF_FROSTPRESENCE     = getSpellBookItemByName(48266); --"Frost Presence"
---  SMARTBUFF_UNHOLYPRESENCE    = getSpellBookItemByName(48265); --"Unholy Presence"
+  SMARTBUFF_BLOODPRESENCE     = getSpellBookItemByName(48263); --"Blood Presence"
+  SMARTBUFF_FROSTPRESENCE     = getSpellBookItemByName(48266); --"Frost Presence"
+  SMARTBUFF_UNHOLYPRESENCE    = getSpellBookItemByName(48265); --"Unholy Presence"
   SMARTBUFF_PATHOFFROST       = getSpellBookItemByName(3714);  --"Path of Frost"
 --  SMARTBUFF_BONESHIELD        = getSpellBookItemByName(49222); --"Bone Shield"
   SMARTBUFF_HORNOFWINTER      = getSpellBookItemByName(57330); --"Horn of Winter"
@@ -702,7 +703,7 @@ function SMARTBUFF_InitSpellIDs()
 
   S.LinkInt   = { SMARTBUFF_BOW, SMARTBUFF_AB, SMARTBUFF_DALARANB };
 
-  --S.LinkSp    = { SMARTBUFF_DARKINTENT, SMARTBUFF_AB, SMARTBUFF_DALARANB, SMARTBUFF_STILLWATER };
+  S.LinkSp    = { SMARTBUFF_DARKINTENT, SMARTBUFF_AB, SMARTBUFF_DALARANB, SMARTBUFF_STILLWATER };
 
   --SMARTBUFF_AddMsgD("Spell IDs initialized");
 end
@@ -785,6 +786,7 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_LIFETAP, 0.025, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_GOSACRIFICE, 60, SMARTBUFF_CONST_SELF, nil, S.CheckPetNeeded},
       {SMARTBUFF_BLOODHORROR, 1, SMARTBUFF_CONST_SELF},
+      {SMARTBUFF_DARKINTENT, 60, SMARTBUFF_CONST_SELF, nil, nil, nil, S.LinkSp},
       {SMARTBUFF_SOULSTONE, 15, SMARTBUFF_CONST_GROUP, {18}, "WARRIOR;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;DEATHKNIGHT;EVOKER;MONK;DEMONHUNTER;HPET;WPET;DKPET"},
       {SMARTBUFF_CREATEHS, 0.03, SMARTBUFF_CONST_ITEM, nil, SMARTBUFF_HEALTHSTONE, nil, S.StoneWarlock},
       {SMARTBUFF_CREATEHSWELL, 0.03, SMARTBUFF_CONST_ITEM, nil, SMARTBUFF_HEALTHSTONE, nil, S.StoneWarlock},
@@ -862,7 +864,7 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_SHIELDBLOCK, 0.1666, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_BATSTANCE, -1, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainWarriorStance},
       {SMARTBUFF_DEFSTANCE, -1, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainWarriorStance},
-      {SMARTBUFF_GLADSTANCE, -1, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainWarriorStance}
+      {SMARTBUFF_BESSTANCE, -1, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainWarriorStance}
     };
   end
 
@@ -892,13 +894,13 @@ function SMARTBUFF_InitSpellList()
   if (SMARTBUFF_PLAYERCLASS == "PALADIN") then
     SMARTBUFF_BUFFLIST = {
       {SMARTBUFF_RIGHTEOUSFURY, 30, SMARTBUFF_CONST_SELF},
-      {SMARTBUFF_HOLYSHIELD, 0.166, SMARTBUFF_CONST_SELF},
+      {SMARTBUFF_SACREDSHIELD, 0.166, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_AVENGINGWARTH, 0.333, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_BOK, 60, SMARTBUFF_CONST_GROUP, {20}, nil, S.LinkStats},
       {SMARTBUFF_BOM, 60, SMARTBUFF_CONST_GROUP, {20}, nil, S.LinkMa},
-      {SMARTBUFF_BOW, 60, SMARTBUFF_CONST_GROUP, {20}, nil, S.LinkInt},
+--      {SMARTBUFF_BOW, 60, SMARTBUFF_CONST_GROUP, {20}, nil, S.LinkInt},
       {SMARTBUFF_HOF, 0.1, SMARTBUFF_CONST_GROUP, {52}, "WARRIOR;DEATHKNIGHT;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
-      {SMARTBUFF_HOSAL, 0.1, SMARTBUFF_CONST_GROUP, {66}, "WARRIOR;DEATHKNIGHT;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
+--      {SMARTBUFF_HOSAL, 0.1, SMARTBUFF_CONST_GROUP, {66}, "WARRIOR;DEATHKNIGHT;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
       {SMARTBUFF_BEACONOFLIGHT, 5, SMARTBUFF_CONST_GROUP, {39}, "WARRIOR;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;DEATHKNIGHT;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
       {SMARTBUFF_BEACONOFAITH, 5, SMARTBUFF_CONST_GROUP, {39}, "WARRIOR;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;DEATHKNIGHT;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
       {SMARTBUFF_CRUSADERAURA, -1, SMARTBUFF_CONST_SELF},

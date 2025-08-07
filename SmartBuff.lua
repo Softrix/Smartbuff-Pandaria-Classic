@@ -6,8 +6,8 @@
 -- Cast the most important buffs on you, tanks or party/raid members/pets.
 -------------------------------------------------------------------------------
 
-SMARTBUFF_DATE               = "060825";
-SMARTBUFF_VERSION            = "r68." .. SMARTBUFF_DATE;
+SMARTBUFF_DATE               = "070825";
+SMARTBUFF_VERSION            = "r69." .. SMARTBUFF_DATE;
 SMARTBUFF_VERSIONNR          = 50500;
 
 SMARTBUFF_TITLE              = "SmartBuff";
@@ -454,6 +454,22 @@ local function IsTalentSkilled(t, i, name)
     isTTreeLoaded = false;
   end
   return false, 0;
+end
+
+-- stance / seal check, especially for Paladin seals, monks and warriors.
+local function IsSealActive(sealName)
+  SMARTBUFF_AddMsgD("Checking for seal/stance: " .. sealName .. ".");
+  for i = 1, GetNumShapeshiftForms() do
+    _, active, _, spellID = GetShapeshiftFormInfo(i);
+    if active then 
+	  name = C_Spell.GetSpellName(spellID)
+      SMARTBUFF_AddMsgD("Found: " .. sealName .. ", SpellID: " ..spellID.. ".");
+      if name == sealName then
+        return true
+      end
+    end
+  end
+  return false
 end
 
 
@@ -1811,6 +1827,13 @@ function SMARTBUFF_BuffUnit(unit, subgroup, mode, spell)
           end
         end
       end
+
+      -- stance/seal check
+      if ((bUsable and sPlayerClass == "PALADIN") or (bUsable and sPlayerClass == "MONK") or (bUsable and sPlayerClass == "WARRIOR") or (bUsable and sPlayerClass == "DEATHKNIGHT")) then
+        if IsSealActive(buffnS) then
+		    bUsable = false;
+		end
+	  end
 
       if (bUsable and not (cBuff.Type == SMARTBUFF_CONST_TRACK or SMARTBUFF_IsItem(cBuff.Type))) then
         -- check if you have enough mana/rage/energy to cast
