@@ -318,6 +318,7 @@ function SMARTBUFF_InitSpellIDs()
   -- Priest
   SMARTBUFF_PWF             = getSpellBookItemByName(21562); --"Power Word: Fortitude"
   SMARTBUFF_PWS             = getSpellBookItemByName(17);    --"Power Word: Shield"
+  SMARTBUFF_INNERFIRE       = getSpellBookItemByName(588);   --"Inner fire"
   SMARTBUFF_FEARWARD        = getSpellBookItemByName(6346);  --"Fear Ward"
   SMARTBUFF_RENEW           = getSpellBookItemByName(139);   --"Renew"
   SMARTBUFF_LEVITATE        = getSpellBookItemByName(1706);  --"Levitate"
@@ -488,7 +489,7 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_FROSTPRESENCE     = getSpellBookItemByName(48266); --"Frost Presence"
   SMARTBUFF_UNHOLYPRESENCE    = getSpellBookItemByName(48265); --"Unholy Presence"
   SMARTBUFF_PATHOFFROST       = getSpellBookItemByName(3714);  --"Path of Frost"
---  SMARTBUFF_BONESHIELD        = getSpellBookItemByName(49222); --"Bone Shield"
+  SMARTBUFF_BONESHIELD        = getSpellBookItemByName(49222); --"Bone Shield"
   SMARTBUFF_HORNOFWINTER      = getSpellBookItemByName(57330); --"Horn of Winter"
   SMARTBUFF_RAISEDEAD         = getSpellBookItemByName(46584); --"Raise Dead"
 --  SMARTBUFF_POTGRAVE          = getSpellBookItemByName(155522); --"Power of the Grave" (P)
@@ -501,26 +502,13 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_BLACKOX         = getSpellBookItemByName(115315); --"Summon Black Ox Statue"
   SMARTBUFF_JADESERPENT     = getSpellBookItemByName(115313); --"Summon Jade Serpent Statue"
   SMARTBUFF_SOTFIERCETIGER  = getSpellBookItemByName(103985); --"Stance of the Fierce Tiger"
-  SMARTBUFF_SOTSTURDYOX     = getSpellBookItemByName(115069); --"Stagger"
---  SMARTBUFF_SOTWISESERPENT  = getSpellBookItemByName(115070); --"Stance of the Wise Serpent"
+  SMARTBUFF_SOTSTURDYOX     = getSpellBookItemByName(115069); --"Stance of the Sturdy Ox"
+  SMARTBUFF_SOTWISESERPENT  = getSpellBookItemByName(115070); --"Stance of the Wise Serpent"
 --  SMARTBUFF_SOTSPIRITEDCRANE= getSpellBookItemByName(154436); --"Stance of the Spirited Crane"
 
   -- Monk buff links
   S.ChainMonkStatue = { SMARTBUFF_BLACKOX, SMARTBUFF_JADESERPENT };
   S.ChainMonkStance = { SMARTBUFF_SOTFIERCETIGER, SMARTBUFF_SOTSTURDYOX, SMARTBUFF_SOTWISESERPENT, SMARTBUFF_SOTSPIRITEDCRANE };
-
-  -- Evoker
-  SMARTBUFF_BRONZEBLESSING  = getSpellBookItemByName(364342);   --"Blessing of the Bronze"
-  SMARTBUFF_SENSEPOWER      = getSpellBookItemByName(361021);   --"Sense Power"
-  SMARTBUFF_SourceOfMagic   = getSpellBookItemByName(369459);   --"Source of Magic"
-  SMARTBUFF_EbonMight       = getSpellBookItemByName(395152);   --"Ebon Might"
-  SMARTBUFF_BlisteringScale = getSpellBookItemByName(360827);   --"Blistering Scales"
-  SMARTBUFF_Timelessness    = getSpellBookItemByName(412710);   --"Timelessness"
-  SMARTBUFF_BronzeAttunement = getSpellBookItemByName(403265);  --"Bronze Attunement"
-  SMARTBUFF_BlackAttunement = getSpellBookItemByName(403264);   --"Black Attunement"
-
-
-  -- Demon Hunter
 
 
   -- Tracking -- this is deprecated due to moving to minimap
@@ -737,7 +725,8 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_VAMPIRICEMBRACE, 30, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_PWF, 60, SMARTBUFF_CONST_GROUP, {6}, "HPET;WPET;DKPET", S.LinkSta},
       {SMARTBUFF_PWS, 0.5, SMARTBUFF_CONST_GROUP, {6}, "MAGE;WARLOCK;ROGUE;PALADIN;WARRIOR;DRUID;HUNTER;SHAMAN;DEATHKNIGHT;MONK;DEMONHUNTER;EVOKER;HPET;WPET;DKPET"},
-      {SMARTBUFF_FEARWARD, 3, SMARTBUFF_CONST_GROUP, {54}, "HPET;WPET;DKPET"},
+      {SMARTBUFF_INNERFIRE, 60, SMARTBUFF_CONST_SELF}, 
+	  {SMARTBUFF_FEARWARD, 3, SMARTBUFF_CONST_GROUP, {54}, "HPET;WPET;DKPET"},
       {SMARTBUFF_LEVITATE, 2, SMARTBUFF_CONST_GROUP, {34}, "HPET;WPET;DKPET"},
       {SMARTBUFF_CHAKRA1, 0.5, SMARTBUFF_CONST_SELF, nil, nil, S.LinkPriestChakra},
       {SMARTBUFF_CHAKRA2, 0.5, SMARTBUFF_CONST_SELF, nil, nil, S.LinkPriestChakra},
